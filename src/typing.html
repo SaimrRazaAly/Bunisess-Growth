@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    body {
+        background-color: #f4f4f4;  /* Light grey background */
+        font-family: 'Arial', sans-serif;  /* Clean and modern font */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        font-size: 3em;
+        color: #333;  /* Dark text for contrast */
+        text-transform: uppercase;
+        margin: 0;
+        text-align: center;
+      }
+      span {
+        border-right: 2px solid #333;  /* Cursor effect */
+        animation: caret 1s steps(1) infinite;
+      }
+      @keyframes caret {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hallo, Wij zijn Codefield!</h1>
+    <script>
+      const texts = [
+        "Designer.",
+        "Photographer.",
+        "Developer.",
+        "Freelancer.",
+      ];
+      let i = 0;
+
+      function typeWriter(text, j, forward = true) {
+        if (forward) {
+          if (j < text.length) {
+            document.querySelector("h1").innerHTML =
+              text.substring(0, j + 1) + "<span></span>";
+            setTimeout(() => typeWriter(text, j + 1, true), 100);
+          } else {
+            setTimeout(() => typeWriter(text, j - 1, false), 700);
+          }
+        } else {
+          if (j > 0) {
+            document.querySelector("h1").innerHTML =
+              text.substring(0, j) + "<span></span>";
+            setTimeout(() => typeWriter(text, j - 1, false), 50);
+          } else {
+            setTimeout(() => {
+              i = (i + 1) % texts.length;
+              typeWriter(texts[i], 0, true);
+            }, 500);
+          }
+        }
+      }
+
+      function startTextAnimation() {
+        typeWriter(texts[i], 0, true);
+      }
+
+      startTextAnimation();
+    </script>
+  </body>
+</html>
