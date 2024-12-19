@@ -46,7 +46,7 @@
 
     <!-- now hero section -->
 
-    <section>
+    <section class="py-10">
       <div
         class="flex items-center justify-center flex-col pt-10  md:flex-row md:px-3 md:pt-20 lg:pt-5"
       >
@@ -99,12 +99,12 @@
     </section>
 
     <!-- About seciton -->
-    <section class=" my-5 p-10">
+    <section class=" my-5 py-10 px-6 ">
       <div
-        class="flex items-center justify-around  pt-10  md:flex-row gap-10md:px-3 md:pt-20 lg:pt-5 flex-col-reverse"
+        class="flex items-center justify-around  pt-10  md:flex-row gap-10 first-letter md:px-3 md:pt-20 lg:pt-5 flex-col-reverse"
       >
         <!-- image -->
-        <div class="sm:max-w-[450px] w-[300px] mt-4">
+        <div class="sm:max-w-[450px] w-[350px] mt-4">
           <img src="asserts/images/moon.png" width="100%" alt="" />
         </div>
 
@@ -124,7 +124,7 @@
            sinlge platefrom,Powerful,affordable & easy.
          </p>
 <!-- about list -->
-<ul class="list-[square] list-inside flex flex-col gap-4 mt-5">
+<ul class="list-[square] list-inside flex flex-col gap-4 mt-5 text-left">
   <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quidem?</li>
   <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quidem?</li>
   <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quidem?</li>
@@ -133,5 +133,107 @@
       
       </div>
     </section>
+    <!-- How It seciton -->
+    <section class=" my-5 p-10">
+      <div
+        class="flex items-center justify-around md:flex-row  pt-10 flex-col   gap-10 md:px-3 md:pt-20 lg:pt-5 "
+      >
+       
+
+         <!-- text -->
+
+         <div
+         class="text-div"
+         >
+         <button class="py-[6px] border border-black text-black px-3 lg:py-[12px] lg:px-[20px] text-[20px] font-bold mb-5">About Us</button>
+         <h2
+           class="text-[30px] font-semibold mb-3 md:text-[35px] xl:text-[50px]"
+         >
+         Build the best space for
+         </h2>
+         <p class="mb-3 leading-[20px]  ">
+           A better way tp manage your sales,team,clients & marketing - on
+           sinlge platefrom,Powerful,affordable & easy.
+         </p>
+<!-- how to work list -->
+<div id="how-list" class="pt-10 w-[80%] border-2 border-red-400 flex items-center justify-center flex-col">
+<!-- data will come from loop -->
+ 
+</div>
+  
+</ul>
+
+      </div>
+
+       <!-- image -->
+       <div class="sm:max-w-[450px] w-[350px] mt-4">
+        <img src="asserts/images/how it work.png" width="100%" alt="" />
+      </div>
+    </section>
+
+
+
+
+        <!-- Pricing seciton -->
+        <section class=" my-5 py-10 px-6  ">
+          <div
+            class="flex items-center justify-around  pt-10  md:flex-row gap-10 first-letter md:px-3 md:pt-20 lg:pt-5 flex-col-reverse"
+          >
+            <!-- Pricing image -->
+            <div class="sm:max-w-[450px] w-[300px] mt-4">
+              <img src="asserts/images/pricing.png" width="100%" alt="" />
+            </div>
+    
+             <!-- Prcing text -->
+    
+             <div
+             class="text-div"
+             >
+             <button class="py-[6px] border border-black text-black px-3 lg:py-[12px] lg:px-[20px] text-[20px] font-bold mb-5">About Us</button>
+             <h2
+               class="text-[30px] font-semibold mb-3 md:text-[35px] xl:text-[50px]"
+             >
+              Fast, friendlier feedback loops make life easier
+             </h2>
+            
+            </div>
+            
+          </section>
+          <!-- Pricing boxes -->
+           <div class="py-2 px-6 flex items-center justify-between">
+<!-- Pricing Card -->
+<div class="bg-white border border-gray-200 rounded-lg shadow-lg p-6 max-w-sm text-center">
+ <!-- Price -->
+ <div class="text-4xl font-bold text-gray-900 mb-2">
+     $<span class="text-5xl">49</span>
+     <span class="text-sm font-normal">per month</span>
+ </div>
+
+ <!-- Subtext -->
+ <p class="text-gray-600 mb-4">A pay-once license, just for you</p>
+
+ <!-- Features List -->
+ <ul class="text-left text-gray-700 mb-6 space-y-2">
+     <li class="flex items-center">
+         <span class="inline-block w-2 h-2 bg-black rounded-full mr-2"></span>
+         The Mac app — yours to keep
+     </li>
+     <li class="flex items-center">
+         <span class="inline-block w-2 h-2 bg-black rounded-full mr-2"></span>
+         Beautiful White_level
+     </li>
+     <li class="flex items-center">
+         <span class="inline-block w-2 h-2 bg-black rounded-full mr-2"></span>
+         One year of saving to Cloud
+     </li>
+ </ul>
+
+ <!-- Join Button -->
+ <button class="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition duration-200">
+     Join
+ </button>
+</div>
+</div>
+<script src="app.js"></script>
   </body>
 </html>
