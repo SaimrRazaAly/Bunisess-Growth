@@ -46,33 +46,33 @@
 
     <!-- now hero section -->
 
-    <section class="py-10">
+    <section class="pt-10 h-screen ">
       <div
-        class="flex items-center justify-center flex-col pt-10  md:flex-row md:px-3 md:pt-20 lg:pt-5"
+        class="flex items-center justify-center flex-col pt-10  md:flex-row md:px-3  lg:pt-5"
       >
         <!-- text -->
         <div
           class="text-div"
         >
           <h2
-            class="text-[40px] font-bold mb-3 md:text-[45px] xl:text-[60px]"
+            class=" text-[40px] font-normal mb-3 md:text-[45px] lg:text-[60px]"
           >
-            Always Track & Analyze Your Business Statistics To Succeed.
+            Always Track & <br> Analyze Your Business Statistics To Succeed.
           </h2>
-          <p class="mb-3 leading-[20px]  ">
+          <p class="mb-3 leading-[20px] py-2 ">
             A better way tp manage your sales,team,clients & marketing - on
             sinlge platefrom,Powerful,affordable & easy.
           </p>
 
           <!-- email box -->
-          <div class="flex ">
+          <div class="flex">
             <input
               type="text"
               placeholder="Enter your email"
-              class="py-[6px] px-3 border-none outline-none lg:py-[14px] lg:px-[25px] md:px-[20px] md:py-[10px]"
+              class="border-none outline-none  py-[8px]  px-3 lg:py-[10px] lg:pr-[65px]"
             />
             <button
-              class="py-[8px] bg-black text-white px-3 lg:py-[16px] lg:px-[25px]"
+              class="py-[8px] bg-black text-white px-3 lg:py-[10px] lg:px-[25px]"
             >
               Get Started
             </button>
@@ -80,28 +80,28 @@
 
           <!-- payment company logos -->
           <div
-            class="flex  gap-4 mt-4 "
+            class="flex  gap-6  mt-[4rem] "
           >
-            <img src="asserts/icons/m_visa.png" alt="Visa" class="w-full" />
+            <img src="asserts/icons/m_visa.png" alt="Visa" class="w-[60px] object-contain"  />
             <img
               src="asserts/icons/MASTERCARD.png"
               alt="MasterCard"
-              class="w-full"
+              class="w-[40px] object-contain" 
             />
-            <img src="asserts/icons/PAYPALL.png" alt="PayPal" class="w-full" />
+            <img src="asserts/icons/PAYPALL.png" alt="PayPal" class="w-[90px] object-contain"  />
           </div>
         </div>
         <!-- image -->
-        <div class="sm:max-w-[450px] w-[350px]">
-          <img src="asserts/images/Illustrations_1.png" width="100%" alt="" />
+        <div class="max-w-[400px]">
+          <img src="asserts/images/Illustrations_1.png" class="w-full"  alt="" />
         </div>
       </div>
     </section>
 
     <!-- About seciton -->
-    <section class=" my-5 py-10 px-6 ">
+    <section class=" ">
       <div
-        class="flex items-center justify-around  pt-10  md:flex-row gap-10 first-letter md:px-3 md:pt-20 lg:pt-5 flex-col-reverse"
+        class="flex items-center justify-around  md:mt-0 md:flex-row gap-10 first-letter md:px-3 mt-36 py-9 lg:pt-5 flex-col-reverse border-2  border-black"
       >
         <!-- image -->
         <div class="sm:max-w-[450px] w-[350px] mt-4">
@@ -174,65 +174,19 @@
 
 
 
-        <!-- Pricing seciton -->
-        <section class=" my-5 py-10 px-6  ">
-          <div
-            class="flex items-center justify-around  pt-10  md:flex-row gap-10 first-letter md:px-3 md:pt-20 lg:pt-5 flex-col-reverse"
-          >
-            <!-- Pricing image -->
-            <div class="sm:max-w-[450px] w-[300px] mt-4">
-              <img src="asserts/images/pricing.png" width="100%" alt="" />
-            </div>
     
-             <!-- Prcing text -->
-    
-             <div
-             class="text-div"
-             >
-             <button class="py-[6px] border border-black text-black px-3 lg:py-[12px] lg:px-[20px] text-[20px] font-bold mb-5">About Us</button>
-             <h2
-               class="text-[30px] font-semibold mb-3 md:text-[35px] xl:text-[50px]"
-             >
-              Fast, friendlier feedback loops make life easier
-             </h2>
-            
-            </div>
-            
-          </section>
-          <!-- Pricing boxes -->
-           <div class="py-2 px-6 flex items-center justify-between">
 <!-- Pricing Card -->
-<div class="bg-white border border-gray-200 rounded-lg shadow-lg p-6 max-w-sm text-center">
- <!-- Price -->
- <div class="text-4xl font-bold text-gray-900 mb-2">
-     $<span class="text-5xl">49</span>
-     <span class="text-sm font-normal">per month</span>
- </div>
+<section class="p-5 md:p-10">
+<div id="pricing-section" class="flex gap-3 items-center justify-center w-full">
 
- <!-- Subtext -->
- <p class="text-gray-600 mb-4">A pay-once license, just for you</p>
 
- <!-- Features List -->
- <ul class="text-left text-gray-700 mb-6 space-y-2">
-     <li class="flex items-center">
-         <span class="inline-block w-2 h-2 bg-black rounded-full mr-2"></span>
-         The Mac app — yours to keep
-     </li>
-     <li class="flex items-center">
-         <span class="inline-block w-2 h-2 bg-black rounded-full mr-2"></span>
-         Beautiful White_level
-     </li>
-     <li class="flex items-center">
-         <span class="inline-block w-2 h-2 bg-black rounded-full mr-2"></span>
-         One year of saving to Cloud
-     </li>
- </ul>
-
- <!-- Join Button -->
- <button class="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition duration-200">
-     Join
- </button>
+<!-- data will come from loop -->
 </div>
+
+
+</section>
+
+
 </div>
 <script src="app.js"></script>
   </body>
