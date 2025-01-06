@@ -3,7 +3,10 @@ module.exports = {
   theme: {
     extend: {
       listStyleType: {
-        square: 'square', // Add support for square list bullets
+        square: "square", // Add support for square list bullets
+      },
+      screen: {
+        pr_md: "850px",
       },
     },
   },
