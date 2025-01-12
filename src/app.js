@@ -83,7 +83,7 @@ pricing_seciton.innerHTML = pricing.map((value) => {
       }">$</sup>
   <h1 class=" ${
     value.even ? " text-white" : " text-black"
-  } text-[4.5rem] md:text-[3.5rem] font-extrabold font-mono   ">${value.price}</h1>
+  } text-[2rem] sm:text-[4.5rem] md:text-[3.5rem] font-extrabold font-mono   ">${value.price}</h1>
   <sub class="translate-y-[70px]  ${
     value.even ? " text-white" : " text-black"
   }  text-[1.2rem] mt-4  md:text-[1rem] font-bold  md:translate-y-10 translate-y-12">per month</sub>
