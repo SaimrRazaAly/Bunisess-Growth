@@ -114,17 +114,22 @@ pricing_seciton.innerHTML = pricing.map((value) => {
         `;
 });
 
-console.log(a);
 
 
-// faq section 
 
-function toggleAccordion(item) {
-  const content = document.getElementById(`content-${item}`);
-  const icon = document.getElementById(`icon-${item}`);
-  const isVisible = !content.classList.contains('hidden');
-
-  // Toggle visibility
-  content.classList.toggle('hidden');
-  icon.classList.toggle('rotate-180', !isVisible);
-}
+document.addEventListener("DOMContentLoaded", () => {
+  let faqHeading = document.querySelector("#faq-heading");
+  let plus = document.querySelector("#plus");
+  let faqPara = document.querySelector("#faq-para");
+  
+  faqHeading.addEventListener("click", () => {
+    if(faqPara.classList.contains("hidden")){
+      faqPara.classList.remove("hidden"); // Removes hidden class
+      plus.innerHTML = "-";
+      }
+      else{
+        faqPara.classList.add("hidden"); // Removes hidden class
+        plus.innerHTML = "+"
+      }
+  });
+});
