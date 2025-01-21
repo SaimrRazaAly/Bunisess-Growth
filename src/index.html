@@ -209,6 +209,60 @@
 
 </section>
 
+<!-- Faq section -->
+<div class="w-full border border-gray-300 rounded-md">
+  <!-- Accordion Item 1 -->
+  <div class="border-b border-gray-200">
+    <button
+      class="w-full flex justify-between items-center py-3 px-4 bg-gray-100 text-left font-medium focus:outline-none focus:ring-2 focus:ring-gray-300"
+      onclick="toggleAccordion('item-1')"
+    >
+      Is it accessible?
+      <svg
+        class="h-4 w-4 transform transition-transform rotate-0"
+        id="icon-item-1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 15a.75.75 0 01-.53-.22l-4-4a.75.75 0 111.06-1.06L10 13.44l3.47-3.72a.75.75 0 111.06 1.06l-4 4a.75.75 0 01-.53.22z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </button>
+    <div class="hidden py-3 px-4 text-gray-700" id="content-item-1">
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </div>
+  </div>
+
+  <!-- Accordion Item 2 -->
+  <div>
+    <button
+      class="w-full flex justify-between items-center py-3 px-4 bg-gray-100 text-left font-medium focus:outline-none focus:ring-2 focus:ring-gray-300"
+      onclick="toggleAccordion('item-2')"
+    >
+      Is it styled?
+      <svg
+        class="h-4 w-4 transform transition-transform rotate-0"
+        id="icon-item-2"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 15a.75.75 0 01-.53-.22l-4-4a.75.75 0 111.06-1.06L10 13.44l3.47-3.72a.75.75 0 111.06 1.06l-4 4a.75.75 0 01-.53.22z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </button>
+    <div class="hidden py-3 px-4 text-gray-700" id="content-item-2">
+      Yes. It comes with default styles that match the other components' aesthetic.
+    </div>
+  </div>
+</div>
 <!-- Footer  -->
 
 <footer class="mt-10 bg-[#151515] text-white  v_sm:px-10 py-4 lg:px-14  lg:pt-20">

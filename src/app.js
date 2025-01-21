@@ -115,3 +115,16 @@ pricing_seciton.innerHTML = pricing.map((value) => {
 });
 
 console.log(a);
+
+
+// faq section 
+
+function toggleAccordion(item) {
+  const content = document.getElementById(`content-${item}`);
+  const icon = document.getElementById(`icon-${item}`);
+  const isVisible = !content.classList.contains('hidden');
+
+  // Toggle visibility
+  content.classList.toggle('hidden');
+  icon.classList.toggle('rotate-180', !isVisible);
+}
