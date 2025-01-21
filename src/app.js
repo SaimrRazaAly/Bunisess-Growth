@@ -117,19 +117,60 @@ pricing_seciton.innerHTML = pricing.map((value) => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  let faqHeading = document.querySelector("#faq-heading");
-  let plus = document.querySelector("#plus");
-  let faqPara = document.querySelector("#faq-para");
-  
-  faqHeading.addEventListener("click", () => {
-    if(faqPara.classList.contains("hidden")){
-      faqPara.classList.remove("hidden"); // Removes hidden class
-      plus.innerHTML = "-";
-      }
-      else{
-        faqPara.classList.add("hidden"); // Removes hidden class
-        plus.innerHTML = "+"
+const faqs = [
+  { question: "What is Tailwind CSS?", answer: "Tailwind CSS is a utility-first CSS framework for rapidly building custom designs." },
+  { question: "How do I install Tailwind CSS?", answer: "You can install Tailwind via npm, yarn, or by using a CDN for quick setups." },
+  { question: "What is the benefit of using utility-first CSS?", answer: "It allows for faster styling, reduces the need for custom CSS, and encourages a modular approach." },
+  { question: "Can I use Tailwind CSS with React?", answer: "Yes, Tailwind CSS works well with React, and many developers use it in their React projects." }
+];
+
+const faqContainer = document.getElementById('faq-container');
+
+// Function to generate FAQ item HTML
+function createFaqItem(faq, index) {
+  return `
+      <div class="mb-4 border-b border-gray-300">
+          <button 
+              class="text-[1.2rem] font-bold p-2 w-full text-left text-lg text-gray-800 flex items-center justify-between focus:outline-none"
+              onclick="toggleAnswer(${index})">
+              ${faq.question}
+              <span id="icon-${index}" class="text-[1.4rem]">+</span>
+          </button>
+          <p id="answer-${index}" 
+             class=" p-2 text-[1rem] mt-1 text-gray-600 hidden transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
+              ${faq.answer}
+          </p>
+      </div>
+  `;
+}
+
+// Render FAQ items
+faqContainer.innerHTML = faqs.map((faq, index) => createFaqItem(faq, index)).join("");
+
+// Function to toggle FAQ answers
+function toggleAnswer(index) {
+  const answer = document.getElementById(`answer-${index}`);
+  const icon = document.getElementById(`icon-${index}`);
+  const allAnswers = document.querySelectorAll('#faq-container p');
+  const allIcons = document.querySelectorAll('#faq-container span');
+
+  // Close all other answers
+  allAnswers.forEach((ans, i) => {
+      if (i !== index && !ans.classList.contains('hidden')) {
+          ans.classList.add('hidden', 'max-h-0');
+          ans.classList.remove('max-h-[1000px]');
+          allIcons[i].textContent = '+';
       }
   });
-});
+
+  // Toggle the clicked answer
+  if (answer.classList.contains('hidden')) {
+      answer.classList.remove('hidden');
+      answer.classList.add('max-h-[1000px]', 'opacity-100');
+      icon.textContent = '-';
+  } else {
+      answer.classList.add('hidden', 'max-h-0');
+      answer.classList.remove('max-h-[1000px]');
+      icon.textContent = '+';
+  }
+}
