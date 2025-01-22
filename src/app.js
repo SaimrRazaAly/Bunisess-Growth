@@ -25,13 +25,15 @@ let List = document.querySelector("#how-list");
 
 List.innerHTML = data.map((value) => {
   return `
-          <div class="flex items-center text-start justify-center gap-4">
-          <div class="lg:max-w-[300px]  w-[150px]"><img src="${value.image}" alt="" ></div>
-          <div class="info-text">
-              <h3 class="font-semibold mb-2 text-[20px]">${value.title}</h3>
-              <p class="font-extralight">${value.paragraph}</p>
-            </div>
-          </div>
+             <div class="flex items-center text-start justify-center gap-4">
+      <div class="image-container lg:max-w-[300px] w-[150px] overflow-hidden">
+        <img src="${value.image}" alt="" class="w-full h-auto object-contain" />
+      </div>
+      <div class="info-text">
+        <h3 class="font-semibold mb-2 text-[20px]">${value.title}</h3>
+        <p class="font-extralight">${value.paragraph}</p>
+      </div>
+    </div>
         `;
 });
 
@@ -174,3 +176,5 @@ function toggleAnswer(index) {
       icon.textContent = '+';
   }
 }
+
+toggleAnswer(0)
