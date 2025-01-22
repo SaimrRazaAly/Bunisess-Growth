@@ -8,7 +8,7 @@
     <link href="../dist/output.css" rel="stylesheet" />
   </head>
   <body class="bg-[#F0F0F0]">
-    <nav class="flex items-center justify-between md:px-10 px- w-full border border-red-600 py-6">
+    <nav class="flex items-center justify-between md:px-10 px-3 w-full  py-6 fixed  z-20">
       <div class="flex items-center justify-center gap-6">
         <div class="max-w-[280px]">
           <a href="#"
@@ -20,8 +20,9 @@
         </div>
         <ul
         id="nav-links"
-        class="flex items-center justify-center md:top-1 md:static md:flex-row md:opacity-100 md:bg-transparent md:text-[18px] sticky top-0 z-40 bg-white h-full w-full gap-5 text-2xl opacity-0"
-      >
+       class="flex items-center justify-center p-5 right-0 bg-white  flex-col gap-5 w-full h-full fixed top-0 opacity-0 md:bg-transparent md:flex-row md:justify-start md:static md:opacity-100 " >
+        <!-- class="flex flex-col right-0 items-center justify-center md:top-1 md:static md:flex-row md:opacity-100 md:bg-transparent md:text-[18px] sticky top-0 z-40 bg-white h-full w-full gap-5 text-2xl opacity-0" -->
+      
           <li>
             <a href="#" class="custom-transition-navlink">About it</a>
           </li>
@@ -32,13 +33,13 @@
           <li><a href="#" class="custom-transition-navlink">FAQs</a></li>
         </ul>
       </div>
-      <div class="gap-2 md:flex items-center hidden absolute  right-10">
+      <div class="gap-2 md:flex items-center hidden ">
         <button class="cta-btn !border-none !font-normal !bg-white ">Login</button>
         <button class="cta-btn !border-none !bg-black !text-white !font-normal">Sign Up</button>
         
       </div>
       <!-- hamburger -->
-       <div>
+       <div class="md:hidden">
         <button
           class="hamburger md:hidden cursor-pointer"
           onclick="document.querySelector('#nav-links').classList.toggle('opacity-100')"
@@ -51,9 +52,9 @@
 
     <!-- now hero section -->
 
-    <section class="md:pt-10 md:h-screen ">
+    <section class="md:pt-28 pt-24 md:h-screen ">
       <div
-        class="flex items-center justify-center flex-col pt-10  md:flex-row md:px-3  lg:pt-5"
+        class="flex items-center justify-center flex-col pt-13  md:flex-row md:px-3  lg:pt-5"
       >
         <!-- text -->
         <div
@@ -69,14 +70,14 @@
             sinlge platefrom,Powerful,affordable & easy.
           </p>
 <!-- Email Box -->
-          <div class="flex items-center gap-2 w-full v_sm:w-auto v_sm:gap-0 v_sm:items-start">
+          <div class="flex items-center  w-full v_sm:w-auto  v_sm:items-start">
             <input
               type="text"
-              class="input-box flex-grow text-[14px] p-3 v_sm:text-[16px] v_sm:py-3 v_sm:px-4 lg:py-4 lg:px-5"
+              class="input-box flex-grow text-[14px] px-5 py-3 v_sm:text-[16px] v_sm:py-3 v_sm:px-4 lg:py-4 lg:px-5"
               placeholder="Enter your email"
             />
             <button
-              class="btn-black text-[14px] v_sm:text-[16px] px-5 py-3 lg:py-4 lg:px-6"
+              class="bg-black text-white text-[14px] v_sm:text-[16px] px-5 py-3.5 lg:py-[1.16rem] lg:px-6"
             >
               Get Started
             </button>

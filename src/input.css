@@ -6,7 +6,7 @@
 @layer utilities {
   /* Navigation utilities */
   .custom-transition-navlink {
-    @apply transition-all border-transparent border-b-2 duration-500 hover:border-b-black;
+    @apply transition-all border-transparent border-b-2 duration-500 hover:border-b-black text-3xl md:text-[1.2rem];
   }
 
   /* Text container styles */
