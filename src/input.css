@@ -19,6 +19,7 @@
   .sec-heading{
     @apply text-[40px]  mb-4 md:text-[34px] xl:text-[50px] lg:text-[40px] lg:w-[90%]
   }
+ 
   
 }
 

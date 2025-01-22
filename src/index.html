@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../src/asserts/logos/LogoBlack.svg" class="invert" type="image/x-icon">
     <title>My Website</title>
     <link href="../dist/output.css" rel="stylesheet" />
   </head>
   <body class="bg-[#F0F0F0]">
-    <nav class="flex items-center justify-between md:px-10 px-6 py-6">
+    <nav class="flex items-center justify-between md:px-10 px- w-full border border-red-600 py-6">
       <div class="flex items-center justify-center gap-6">
         <div class="max-w-[280px]">
           <a href="#"
@@ -18,8 +19,9 @@
           /></a>
         </div>
         <ul
-          class="flex items-center justify-center md:sticky md:flex-row md:opacity-100 md:bg-transparent md:text-[18px] fixed right-0 flex-col top-0 bg-white h-full w-full gap-5 text-2xl opacity-0"
-        >
+        id="nav-links"
+        class="flex items-center justify-center md:top-1 md:static md:flex-row md:opacity-100 md:bg-transparent md:text-[18px] sticky top-0 z-40 bg-white h-full w-full gap-5 text-2xl opacity-0"
+      >
           <li>
             <a href="#" class="custom-transition-navlink">About it</a>
           </li>
@@ -30,11 +32,21 @@
           <li><a href="#" class="custom-transition-navlink">FAQs</a></li>
         </ul>
       </div>
-      <div class="gap-2 flex items-center">
-        <button class="btn-white">Login</button>
-        <button class="btn-black">Sign Up</button>
+      <div class="gap-2 md:flex items-center hidden absolute  right-10">
+        <button class="cta-btn !border-none !font-normal !bg-white ">Login</button>
+        <button class="cta-btn !border-none !bg-black !text-white !font-normal">Sign Up</button>
         
       </div>
+      <!-- hamburger -->
+       <div>
+        <button
+          class="hamburger md:hidden cursor-pointer"
+          onclick="document.querySelector('#nav-links').classList.toggle('opacity-100')"
+        >
+     <img src="asserts/icons/lines.png" alt="" class="w-[30px] h-[30px] object-contain z-[999] fixed top-5 right-5" />
+
+        </button>
+       </div>
     </nav>
 
     <!-- now hero section -->
