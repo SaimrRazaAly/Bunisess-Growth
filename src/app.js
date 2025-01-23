@@ -178,3 +178,35 @@ function toggleAnswer(index) {
 }
 
 toggleAnswer(0)
+
+//  navbar 
+
+let lastScrollTop = 0;
+const navbar = document.getElementById('navbar');
+const loginBtn = document.getElementById('login-btn');
+
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+
+
+  if (scrollTop > lastScrollTop) {
+    // User is scrolling down, hide the navbar
+    navbar.style.top = '-100px'; // Moves the navbar off-screen;
+  } 
+  else if (scrollTop == 0) {
+    navbar.classList.remove('bg-white', 'p-2', 'shadow-md');
+    navbar.style.top = '0';
+    loginBtn.classList.remove('underline');
+  }
+  else {
+    // User is scrolling up, show the navbar
+    navbar.style.top = '0';
+    navbar.classList.add('bg-white','!py-2', 'shadow-md');
+    loginBtn.classList.add('underline');
+  }
+
+  // Update the last scroll position
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative scroll
+
+});

@@ -16,10 +16,11 @@
   .cta-btn{
     @apply md:py-[6px] border border-black text-black md:px-3 lg:py-[12px] lg:px-[20px] text-[16px] py-2 px-3 font-bold mb-5
   }
+  .login-btn {
+    @apply md:py-[6px] border-none text-black md:px-3 lg:py-[12px] lg:px-[20px] text-[16px] py-2 px-3 mb-5 font-normal bg-white; 
+  }
   .sec-heading{
     @apply text-[40px]  mb-4 md:text-[34px] xl:text-[50px] lg:text-[40px] lg:w-[90%]
   }
- 
-  
 }
 

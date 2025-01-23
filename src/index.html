@@ -8,7 +8,7 @@
     <link href="../dist/output.css" rel="stylesheet" />
   </head>
   <body class="bg-[#F0F0F0]">
-    <nav class="flex items-center justify-between md:px-10 px-3 w-full  py-6 fixed  z-20">
+    <nav id="navbar" class="flex items-center justify-between md:px-10 px-3 w-full  py-6 fixed  z-20  transition-all duration-300 top-0">
       <div class="flex items-center justify-center gap-6">
         <div class="max-w-[280px]">
           <a href="#"
@@ -33,9 +33,9 @@
           <li><a href="#" class="custom-transition-navlink">FAQs</a></li>
         </ul>
       </div>
-      <div class="gap-2 md:flex items-center hidden ">
-        <button class="cta-btn !border-none !font-normal !bg-white ">Login</button>
-        <button class="cta-btn !border-none !bg-black !text-white !font-normal">Sign Up</button>
+      <div class="gap-2 md:flex items-center hidden md:top-2">
+        <button class="login-btn  !bg-white " id="login-btn">Login</button>
+        <button class="login-btn !bg-black !text-white !font-normal">Sign Up</button>
         
       </div>
       <!-- hamburger -->
