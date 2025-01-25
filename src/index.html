@@ -7,10 +7,15 @@
     <title>My Website</title>
     <link href="../dist/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-[#F0F0F0]">
+  <style>
+   html{
+    overflow-x: hidden;
+   }
+  </style>
+  <body class="bg-[#F0F0F0] overflow-x-hidden">
     <nav id="navbar" class="flex items-center justify-between md:px-10 px-3 w-full  py-6 fixed  z-20  transition-all duration-300 top-0">
       <div class="flex items-center justify-center gap-6">
-        <div class="max-w-[280px]">
+        <div class="max-w-[280px] border border-red-500">
           <a href="#"
             ><img
               src="../src/asserts/logos/LogoBlack.svg"
@@ -20,7 +25,7 @@
         </div>
         <ul
         id="nav-links"
-       class="flex items-center justify-center p-5 right-0 bg-white  flex-col gap-5 w-full h-full fixed top-0 opacity-0 md:bg-transparent md:flex-row md:justify-start md:static md:opacity-100 " >
+       class="flex items-center justify-center p-5  right-0 bg-white  flex-col gap-5 w-full h-full fixed top-0 opacity-0 md:bg-transparent md:flex-row md:justify-start md:static md:opacity-100 " >
         <!-- class="flex flex-col right-0 items-center justify-center md:top-1 md:static md:flex-row md:opacity-100 md:bg-transparent md:text-[18px] sticky top-0 z-40 bg-white h-full w-full gap-5 text-2xl opacity-0" -->
       
           <li>
@@ -44,7 +49,7 @@
           class="hamburger md:hidden cursor-pointer"
           onclick="document.querySelector('#nav-links').classList.toggle('opacity-100')"
         >
-     <img src="asserts/icons/lines.png" alt="" class="w-[30px] h-[30px] object-contain z-[999] fixed top-5 right-5" />
+     <img src="asserts/icons/lines.png" alt="" class="w-[30px] h-[30px] object-contain z-[999] " />
 
         </button>
        </div>
@@ -54,34 +59,35 @@
 
     <section class="md:pt-28 pt-24 md:h-screen ">
       <div
-        class="flex items-center justify-center flex-col pt-13  md:flex-row md:px-3  lg:pt-5"
+        class="flex border border-red-400 items-center md:justify-around justify-center flex-col pt-13  md:flex-row lg:px-3  lg:pt-5"
       >
         <!-- text -->
         <div
           class="text-div "
         >
           <h2
-            class="text-[32px] v_sm:text-[36px] mb-4 md:text-[40px] lg:text-[50px] xl:text-[60px] font-bold leading-tight"
+            class="mt-5 lg:mt-0 text-[32px] v_sm:text-[36px] mb-4 md:text-[40px] lg:text-[50px] xl:text-[60px] font-bold leading-tight"
           >
-            Always Track & <br class="hidden v_sm:block"> Analyze Your Business Statistics To Succeed.
+            Always Track & <br class="hidden md:hidden lg:block v_sm:block"> Analyze Your Business Statistics To Succeed.
           </h2>
-          <p class="mb-3 leading-[20px] py-2 ">
+          <p class="opacity-85 leading-normal mb-2 py-2">
             A better way tp manage your sales,team,clients & marketing - on
             sinlge platefrom,Powerful,affordable & easy.
           </p>
 <!-- Email Box -->
-          <div class="flex items-center  w-full v_sm:w-auto  v_sm:items-start">
-            <input
-              type="text"
-              class="input-box flex-grow text-[14px] px-5 py-3 v_sm:text-[16px] v_sm:py-3 v_sm:px-4 lg:py-4 lg:px-5"
-              placeholder="Enter your email"
-            />
-            <button
-              class="bg-black text-white text-[14px] v_sm:text-[16px] px-5 py-3.5 lg:py-[1.16rem] lg:px-6"
-            >
-              Get Started
-            </button>
-          </div>
+<div class="flex items-center bth_screen:mt-0 bth_screen:static md:absolute md:mt-[350px] p-1  max-w-md">
+  <input
+    type="text"
+    class="flex-grow text-sm px-4 py-3 border-none outline-none"
+    placeholder="Enter your email"
+  />
+  <button
+    class="bg-black text-white text-sm px-4 py-3  relative top-0  hover:bg-gray-800 transition"
+  >
+    Get started
+  </button>
+</div>
+
           
           
 
@@ -111,7 +117,7 @@
         class="flex items-center justify-center  md:mt-0 md:flex-row gap-10 first-letter md:px-3  py-[100px] border border-red-500 lg:pt-5 flex-col-reverse "
       >
         <!-- image -->
-        <div class="max-w-[450px]">
+        <div class="sm:max-w-[500px] v_sm:w-[350px] w-[250px]">
           <img src="asserts/images/moon.png" width="100%" alt="" />
         </div>
 
@@ -126,19 +132,19 @@
            >
            Fast, friendlier feedback loops make life easier.
           </h2>
-          <p class="">
+          <p class="opacity-85 leading-normal">
             A better way tp manage your sales,team,clients & marketing - on
             sinlge platefrom,Powerful,affordable & easy.
          </p>
         
    
 <!-- about list -->
-<ul class="list-[square] list-inside flex flex-col gap-4 mt-5 text-left">
-  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quidem?</li>
-  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quidem?</li>
-  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quidem?</li>
-  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quidem?</li>
-  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quidem?</li>
+<ul class="list-[square] list-inside flex flex-col gap-4 mt-5 text-left opacity-85">
+  <li>Shared Cloud Libraries, for a single source of truth</li>
+  <li>Prototype previews for user testing and research</li>
+  <li>Easy organization with projects</li>
+  <li>Free developer handoff, right inside the browser</li>
+  <li>Two-factor authentication and SSO”</li>
 
 </ul>
       
@@ -167,7 +173,7 @@
            sinlge platefrom,Powerful,affordable & easy.
          </p>
 <!-- how to work list -->
-<div id="how-list" class="pt-10 lg:w-[80%] border-2 border-red-400 flex items-center justify-center flex-col ">
+<div id="how-list" class="pt-10 pr-10 v_sm:pr-0 lg:w-[80%] border-2 border-red-400 flex items-center justify-center flex-col ">
 <!-- data will come from loop -->
  
 </div>
@@ -177,7 +183,7 @@
       </div>
 
        <!-- image -->
-       <div class="sm:max-w-[450px] w-[350px] mt-4">
+       <div class="sm:max-w-[450px] v_sm:w-[300px] w-[250px] mt-4">
         <img src="asserts/images/how it work.png" width="100%" alt="" />
       </div>
     </section>
@@ -192,7 +198,7 @@
   class="flex items-center justify-between  md:mt-0 md:flex-row  first-letter md:px-3 py-10  flex-col-reverse  w-full mb-16"
 >
   <!-- image -->
-  <div class="max-w-[350px]">
+  <div class="sm:max-w-[500px] v_sm:w-[350px] w-[250px]">
     <img src="asserts/images/pricing.png" width="100%" alt="" />
   </div>
 
@@ -213,7 +219,7 @@
    </p>
   </div>
   </div>
-<div id="pricing-section" class="flex lg:gap-2 gap-5 justify-center items-center px-10 lg:flex-row  w-full flex-col">
+<div id="pricing-section" class="flex lg:gap-2 gap-5 justify-center items-center px-2 v_sm:px-10 lg:flex-row lg:px-[1.24rem]  w-full flex-col">
 
 
 <!-- data will come from loop -->
@@ -229,11 +235,11 @@
    <!-- left -->
   <!-- heading -->
   <div
-  class="text-div lg:!w-[50%] !w-full border border-red-500 "
+  class="text-div lg:!w-[50%] md:!w-[60%] !w-full border border-red-500 "
   >
   <button class="cta-btn">FAQS</button>
   <h2
-  class="sec-heading"
+  class="sec-heading "
   >
   Common Questions
 </h2>
@@ -281,7 +287,7 @@
       <input
         type="email"
         placeholder="Enter your email"
-        class="border-none outline-none text-black  v_sm:py-[8px]  v_sm:px-3 lg:py-[10px] lg:pr-[65px]"
+        class="w-[60%] sm:w-full border-none outline-none text-black  v_sm:py-[8px]  v_sm:px-3 lg:py-[10px] lg:pr-[65px]"
       />
       <button
         class=" px-2 py-2 v_sm:py-[8px] bg-[#151515] border border-white text-white v_sm:px-3 lg:py-[10px] lg:px-[25px]"

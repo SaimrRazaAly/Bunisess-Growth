@@ -8,6 +8,7 @@ module.exports = {
       },
       screens: {
         v_sm: "350px", // Custom screen size
+        bth_screen: "850px",
       },
     },
   },

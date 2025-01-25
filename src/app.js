@@ -46,6 +46,7 @@ const pricing = [
       "  Beautiful White_level",
       "One year of saving to Cloud",
     ],
+    first:true,
   },
   {
     price: 99,
@@ -76,55 +77,52 @@ const pricing = [
 let pricing_seciton = document.querySelector("#pricing-section");
 
 pricing_seciton.innerHTML = pricing.map((value) => {
+  const textColorClass = value.even ? "text-white" : "text-black";
+  const bgColorClass = value.even ? "bg-white text-black" : "bg-[#151515] text-white";
+  const firstbox = value.first ? "lg:translate-y-[90px]" : " ";
+  const buttonClass = `${bgColorClass} py-2 w-full font-mono  text-[1.3rem] mt-10 `;
+  
   return `
-  <div class="py-4 border border-black px-10 even:bg-[#151515] even:border-none last:bg-white last:border-none w-full text-center lg:w-auto">
-  <div class="flex items-start flex-col">
-      <div class=flex items-center gap-1>
-      <sup class="font-semibold translate-y-[50px] text-[2rem] lg:text-[1.5rem]  md:translate-y-10 ${
-        value.even ? " text-white" : " text-black"
-      }">$</sup>
-  <h1 class=" ${
-    value.even ? " text-white" : " text-black"
-  } text-[2rem] sm:text-[4.5rem] md:text-[3.5rem] font-extrabold font-mono   ">${value.price}</h1>
-  <sub class="translate-y-[70px]  ${
-    value.even ? " text-white" : " text-black"
-  }  text-[1.2rem] mt-4  md:text-[1rem] font-bold  md:translate-y-10 translate-y-12">per month</sub>
+  <div class="py-4 border border-black px-10 even:bg-[#151515] even:border-none last:bg-white last:border-none w-full text-center lg:min-h-[540px]  lg:w-auto ">
+    <div class="flex items-start flex-col ">
+      <div class="flex items-center gap-1">
+        <sup class="font-semibold text-[2rem] lg:text-[2rem] ${textColorClass}">${value.even ? "$" : "$"}</sup>
+        <h1 class="${textColorClass} text-[2.5rem] v_sm:text-[3.6rem] sm:text-[4.5rem] md:text-[3.5rem]  lg:text-[5rem] font-extrabold font-mono">${value.price}</h1>
+        <sub class="mt-4 text-[1.2rem] md:text-[1rem] lg:text-[1.2rem] font-bold ${textColorClass}">per month</sub>
+      </div>
+      <p class="mt-3 text-[1.1rem] md:text-[1.2rem] text-start md:leading-7  ${textColorClass}">${value.para}</p>
+      <ul class="list-[square] list-inside flex flex-col text-left text-[1rem] mt-11 gap-5  overflow-y-auto">
+        ${value.options.map(option => `<li class="${textColorClass}">${option}</li>`).join("")}
+      </ul>
+      <button class="${buttonClass} ${firstbox}">Join</button>
+    </div>
   </div>
-  <p class=" text-[1.7rem] md:text-[1.2rem]  text-start md:leading-7 leading-10 ${value.even ? " text-white" : " text-black"}">${
-    value.para
-  }</p>
+  `;
   
-  <ul class="list-[square] list-inside flex flex-col  text-left text-[1rem] mt-11 gap-5  h-[15rem] ">
-
-   ${value.options.map((option) => {
-     return `<li class=${
-       value.even ? "text-white " : "text-black"
-      }>${option}</li>`;
-   }).join("")}
-      
-  </ul>
-  
-  
-    <button class="${
-      value.even ? "bg-white text-black" : "bg-[#151515]  text-white"
-    }  py-2 w-full  font-mono text-[1.3rem] mt-0 lg:mt-10">Join</button>
- 
-  </div>
-
-
-</div>
-        `;
 });
 
 
 
 
 const faqs = [
-  { question: "What is Tailwind CSS?", answer: "Tailwind CSS is a utility-first CSS framework for rapidly building custom designs." },
-  { question: "How do I install Tailwind CSS?", answer: "You can install Tailwind via npm, yarn, or by using a CDN for quick setups." },
-  { question: "What is the benefit of using utility-first CSS?", answer: "It allows for faster styling, reduces the need for custom CSS, and encourages a modular approach." },
-  { question: "Can I use Tailwind CSS with React?", answer: "Yes, Tailwind CSS works well with React, and many developers use it in their React projects." }
+  { 
+    question: "Why should I track and analyze business statistics?", 
+    answer: "Always tracking and analyzing your business statistics is essential for identifying growth opportunities, improving decision-making, and ensuring long-term success." 
+  },
+  { 
+    question: "What is the benefit of using a single platform for business management?", 
+    answer: "Using a single platform for managing sales, team, clients, and marketing simplifies workflows, saves time, and ensures all your data is easily accessible in one place." 
+  },
+  { 
+    question: "How can this platform help improve my business performance?", 
+    answer: "This platform provides powerful, affordable, and easy tools to optimize your sales processes, manage teams effectively, and boost client engagement." 
+  },
+  { 
+    question: "Is the platform suitable for small and large businesses?", 
+    answer: "Yes, the platform is designed to cater to both small and large businesses, offering flexibility and scalability as your business grows." 
+  }
 ];
+
 
 const faqContainer = document.getElementById('faq-container');
 
