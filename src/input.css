@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "paragraphFont";
+  src: url("asserts/fonts/ABeeZee-Italic.ttf") format("ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "HeadingFont";
+  src: url("asserts/fonts/ABeeZee-Regular.ttf") format("ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+body {
+  font-family: "HeadingFont", sans-serif;
+}
+* {
+  border: 1px soild red;
+}
 /* Custom Utilities */
 @layer utilities {
   /* Navigation utilities */
@@ -11,16 +28,15 @@
 
   /* Text container styles */
   .text-div {
-    @apply w-full items-start leading-none v_sm:p-5 px-2 flex justify-center flex-col lg:w-[55%] md:text-start text-start mx-2 md:w-[40%] ;
+    @apply w-full items-start leading-none v_sm:p-5 px-2 flex justify-center flex-col lg:w-[55%] md:text-start text-start mx-2 md:w-[40%];
   }
-  .cta-btn{
-    @apply md:py-[6px] border border-black text-black md:px-3 lg:py-[12px] lg:px-[20px] text-[16px] py-2 px-3 font-bold mb-5
+  .cta-btn {
+    @apply md:py-[6px] border border-black text-black md:px-3 lg:py-[12px] lg:px-[20px] text-[16px] py-2 px-3 font-bold mb-5;
   }
   .login-btn {
-    @apply md:py-[6px] border-none text-black md:px-3 lg:py-[12px] lg:px-[20px] text-[16px] py-2 px-3 mb-5 font-normal bg-white; 
+    @apply md:py-[6px] border-none text-black md:px-3 lg:py-[12px] lg:px-[20px] text-[16px] py-2 px-3 mb-5 font-normal bg-white;
   }
-  .sec-heading{
-    @apply text-[40px]  mb-4 md:text-[34px] xl:text-[50px] lg:text-[40px] lg:w-[90%] 
+  .sec-heading {
+    @apply text-[40px]  mb-4 md:text-[34px] xl:text-[50px] lg:text-[40px] lg:w-[90%];
   }
 }
-

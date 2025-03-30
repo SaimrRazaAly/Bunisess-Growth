@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily:{
+        HeadingFont :["HeadingFont","sans-serif"],
+        paragraphFont :["paragraphFont","sans-serif"],
+      },
       listStyleType: {
         square: "square", // Add support for square list bullets
       },

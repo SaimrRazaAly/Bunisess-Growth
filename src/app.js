@@ -26,7 +26,7 @@ let List = document.querySelector("#how-list");
 List.innerHTML = data.map((value) => {
   return `
              <div class="flex items-center text-start justify-center gap-4">
-      <div class="image-container lg:max-w-[300px] w-[150px] overflow-hidden">
+      <div class="image-container lg:max-w-[350px] w-[150px] overflow-hidden">
         <img src="${value.image}" alt="" class="w-full h-auto object-contain" />
       </div>
       <div class="info-text">
